@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: #156d5f;
+  font-family: "Georgia", "Iowan Old Style", serif;
+  font-size: calc(2em + 1vw);
+  background: #d1f1fe;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  color: #156d5f;
+  text-decoration: none;
+  transition: .2s ease-out;
+  transition-property: transform, color;
+
+  outline: none;
+  text-decoration: none;
+  text-shadow:
+    0.05em 0 0 #d1f1fe, -0.05em 0 0 #d1f1fe,
+    0 0.05em 0 #d1f1fe, 0 -0.05em 0 #d1f1fe,
+    0.1em 0 0 #d1f1fe, -0.1em 0 0 #d1f1fe,
+    0 0.1em 0 #d1f1fe, 0 -0.1em 0 #d1f1fe;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+}
+
+a::after {
+  position: absolute;
+  left: 100;
+  content: '→';
+  transform: translateX(-1em);
+  opacity: 0;
+  transition: .2s ease-out;
+  transition-property: transform, opacity;
+  text-indent: 0;
+}
+
+a:focus,
+a:hover {
+  color: #0d3a6d;
+  transform: translateX(-.5em);
+}
+
+a:focus::after,
+a:hover::after {
+  transform: translateX(0);
+  opacity: 1;
+}

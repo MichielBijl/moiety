@@ -472,7 +472,7 @@ a:focus, a:hover {
   text-decoration: underline;
 }
 
-code {
+:not(pre) > code {
   display: inline;
   margin: 0 .3em;
   padding: .1rem .3rem;

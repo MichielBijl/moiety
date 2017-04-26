@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 30em;
+    min-height: 100%;
+    justify-content: center;
+    color: #293d59;
+    font-size: 1rem;
+    font-family: "PT Sans", "helvetica neue", "helvetica", sans-serif;
+    text-align: center;
+}
+
+main {
+    padding: 1em;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h1 span {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.125em 0.3em 0.0625em;
+    border: 1px solid currentColor;
+    border-radius: 0.2em;
+    color: hsl(0, 0%, 47%);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+main > p:first-of-type,
+footer {
+    margin-top: 3em;
+    padding-top: 3em;
+    border-top: 1px solid hsl(0, 0%, 85%);
+}
+
+footer {
+    padding-top: 2em;
+}
+
+p:first-of-type ~ p {
+    margin-top: 1em;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+}
+
+a {
+    display: inline-block;
+    padding: 0.125em 0.1875em 0.0625em;
+    border-radius: 0.25em;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    outline: none;
+    color: #fff;
+}
+
+a[href^="https://gitter"] {
+    color: hsl(261, 52%, 38%);
+    background: hsl(261, 52%, 97%);
+}
+
+a[href^="https://gitter"]:focus,
+a[href^="https://gitter"]:hover {
+    background: hsl(261, 52%, 38%);
+}
+
+a[href^="https://twitter"] {
+    color: hsl(203, 86%, 39%);
+    background: hsl(203, 86%, 97%);
+}
+
+a[href^="https://twitter"]:focus,
+a[href^="https://twitter"]:hover {
+    background: hsl(203, 86%, 39%);
+}
+
+a[href^="https://github"] {
+    color: hsl(0, 0%, 20%);
+    background: hsl(0, 0%, 97%);
+}
+
+a[href^="https://github"]:focus,
+a[href^="https://github"]:hover {
+    background: hsl(0, 0%, 20%);
+}
+
+a[href^="https://paciello"] {
+    color: hsl(206, 75%, 42%);
+    background: hsl(206, 75%, 97%);
+}
+
+a[href^="https://paciello"]:focus,
+a[href^="https://paciello"]:hover {
+    background: hsl(206, 75%, 42%);
+}
+
+a[href$="aria-practices/"] {
+    color: hsl(208, 66%, 36%);
+    background: hsl(208, 66%, 97%);
+}
+
+a[href$="aria-practices/"]:focus,
+a[href$="aria-practices/"]:hover {
+    background: hsl(208, 66%, 36%);
+}
+
+a[href$="michielbijl.nl"] {
+    color: hsl(37, 86%, 32%);
+    //color: #333;
+    background: hsl(37, 86%, 97%);
+}
+
+a[href$="michielbijl.nl"]:focus,
+a[href$="michielbijl.nl"]:hover {
+    color: #333;
+    background: hsl(37, 86%, 59%);
+}
+
+a[href^="http://hector"] {
+    color: hsl(101, 22%, 39%);
+    background: hsl(101, 22%, 97%);
+}
+
+a[href^="http://hector"]:focus,
+a[href^="http://hector"]:hover {
+    background: hsl(101, 22%, 39%);
+}

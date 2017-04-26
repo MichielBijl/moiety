@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cascading Semantic Stylehooks</title>
+  <link rel="stylesheet" href="thinks.css">
+</head>
+<body>
+  <main>
+    <article>
+      <h1 id="cascadingsemanticstylehooks">Cascading Semantic Stylehooks</h1>
+
+      <p>Yesterday Brian sent me a link to a little something they had worked on. It was a script that added a role attribute to all HTML elements with an exposed ARIA role. “But why?” you might ask. To feed our browser rendering engine overlords of course. No, to make it possible to use a CSS query selector to, uhm, select elements based on how they’re exposed. Brian goes into detail in their post <a href="http://bkardell.com/blog/Reflecting-On-Roles.html">Reflecting on Roles</a>.</p>
+
+      <p>I really like this idea because it would make writing CSS a lot easier and at the same time more meaningful. Last year I wrote a little bit about styling based on meaning in <a href="http://s.codepen.io/Michiel/debug/zvebZO/jVkpoggvLOoA">Cool Semantic Styles</a>.</p>
+
+      <h2 id="ariarules">ARIA rules</h2>
+
+      <p>ARIA does rule, but that’s not what I mean. ARIA has some rules that you should adhere to when you use it. Under <a href="https://www.w3.org/TR/html-aria/#rules-wd">Web developer requirements for use of ARIA in HTML</a> it says (emphasis mine):</p>
+
+      <blockquote>
+        <p>Web developers <strong>may use the ARIA role</strong> and aria-* attributes on HTML elements, in accordance with the requirements described in [wai-aria-1.1], <strong>except where these</strong> conflict with the strong native semantics or <strong>are equal to the implicit ARIA semantics of a given HTML element</strong>.</p>
+      </blockquote>
+
+      <p>Brian’s current script breaks this rule for all the things. Which isn’t really a problem, yet. I would love to see something like this come of the ground as it would make styling so much easier. Brian already mentioned that a new pseudo-class might be a better solution.</p>
+
+      <h2 id="pseudoclass">Pseudo-class</h2>
+
+      <blockquote>
+        <p>Note, the syntax there is debatable - practically speaking it would probably make more sense to use a pseudo-class like :role(heading) for this purpose.</p>
+      </blockquote>
+
+      <p>That looks pretty neat. Imagine being able to write something like this:</p>
+
+      <pre><code>:role(button) {
+      …
+      }
+
+      :role(button):matches(:hover, :focus) {
+      …
+      }
+      </code></pre>
+
+      <p>That would be down right awesome! It would select all the elements that are exposed as buttons—whether it be <code>&lt;button&gt;</code> or <code>&lt;a href="#rolf-not-a-real-button" role="button"&gt;</code> and style them, no more adding a <code>btn</code> class to all your divs that aren’t really buttons. In all seriousness, this would both make writing CSS easier and make people more aware of accessibility (or at the very least aware of these things called element roles).</p>
+
+      <h2 id="okaynowwhat">Okay, now what?</h2>
+
+      <p>Good question. Brian told me that this isn’t the first time something like this has been proposed. Which totally isn’t a recurring theme when it comes to web things. Nope, not at all.</p>
+
+      <p>Anyway, it would be good to explore this more and get more people in on it. First of all, the way in which this works needs to change a bit as to not break ARIA’s rules.</p>
+
+      <h2 id="backtoclasseseh">Back to classes, eh?</h2>
+
+      <p>Perhaps, it’s what they were originally meant for anyway [citation needed]. I don’t see why Brian’s script couldn’t add a <code>button</code> or <code>menuitem</code> class to their corresponding elements (which have those roles).</p>
+
+      <p>That, err, sounds kinda like what Bootstrap does with it’s <code>btn</code> class and so forth. But whatever, the thing is that you would get the actual exposed role for things as a class that you can use to style.</p>
+
+      <p>Ideally, to help this get a bit more traction, we would turn this into a plugin for something like <a href="http://postcss.org">PostCSS</a>. I already <a href="https://twitter.com/MichielBijl/status/857037610446987264">asked Jonathan Neal</a> if they’d be interested. To which they said they are! I’ll update this page when they’re finished :D.</p>
+
+      <h2 id="okaythanksforuhmwhatexactly">Okay, thanks for, uhm, what exactly?</h2>
+
+      <p>As of right now nothing much. I’d like to thank Brian for coming up with this and writing the script that does all the hard work. If you also think this is neat, please <a href="https://twitter.com/briankardell">tell Brian over on Twitter</a>.</p>
+    </article>
+  </main>
+
+
+  <footer>
+    <p>Words by <a href="../">Michiel Bijl</a>.</p>
+  </footer>
+</body>
+</html>

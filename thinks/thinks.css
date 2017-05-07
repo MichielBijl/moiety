@@ -268,10 +268,16 @@ body > footer::after {
 article {
   position: relative;
 }
-article p, article blockquote, article ul, article ol, article pre {
+
+main p,
+main blockquote,
+main ul,
+main ol,
+main pre {
   margin-bottom: 0;
   font-size: 1.25rem;
 }
+
 article * + *:not(li) {
   margin-top: 2rem;
 }
@@ -470,6 +476,9 @@ a {
 }
 a:focus, a:hover {
   text-decoration: underline;
+}
+a[href^="http:"]::after {
+  content: ' (HTTP)';
 }
 
 :not(pre) > code {

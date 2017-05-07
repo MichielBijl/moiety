@@ -128,14 +128,14 @@ a[href$="aria-practices/"]:hover {
     background: hsl(208, 66%, 36%);
 }
 
-a[href$="michielbijl.nl"] {
+a[href$="/thinks"] {
     color: hsl(37, 86%, 32%);
     //color: #333;
     background: hsl(37, 86%, 97%);
 }
 
-a[href$="michielbijl.nl"]:focus,
-a[href$="michielbijl.nl"]:hover {
+a[href$="/thinks"]:focus,
+a[href$="/thinks"]:hover {
     color: #333;
     background: hsl(37, 86%, 59%);
 }

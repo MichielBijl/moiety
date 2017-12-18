@@ -10,7 +10,6 @@ body {
     min-height: 100%;
     justify-content: center;
     color: #293d59;
-    font-size: 1rem;
     font-family: "PT Sans", "helvetica neue", "helvetica", sans-serif;
     text-align: center;
 }
@@ -85,6 +84,7 @@ a[href^="https://gitter"] {
 
 a[href^="https://gitter"]:focus,
 a[href^="https://gitter"]:hover {
+    color: #fff;
     background: hsl(261, 52%, 38%);
 }
 
@@ -95,6 +95,7 @@ a[href^="https://twitter"] {
 
 a[href^="https://twitter"]:focus,
 a[href^="https://twitter"]:hover {
+    color: hsl(203, 86%, 97%);
     background: hsl(203, 86%, 39%);
 }
 
@@ -105,17 +106,8 @@ a[href^="https://github"] {
 
 a[href^="https://github"]:focus,
 a[href^="https://github"]:hover {
+    color: hsl(0, 0%, 97%);
     background: hsl(0, 0%, 20%);
-}
-
-a[href^="https://paciello"] {
-    color: hsl(206, 75%, 42%);
-    background: hsl(206, 75%, 97%);
-}
-
-a[href^="https://paciello"]:focus,
-a[href^="https://paciello"]:hover {
-    background: hsl(206, 75%, 42%);
 }
 
 a[href$="aria-practices/"] {
@@ -125,12 +117,12 @@ a[href$="aria-practices/"] {
 
 a[href$="aria-practices/"]:focus,
 a[href$="aria-practices/"]:hover {
+    color: hsl(208, 66%, 97%);
     background: hsl(208, 66%, 36%);
 }
 
 a[href$="/thinks"] {
     color: hsl(37, 86%, 32%);
-    //color: #333;
     background: hsl(37, 86%, 97%);
 }
 
@@ -138,14 +130,4 @@ a[href$="/thinks"]:focus,
 a[href$="/thinks"]:hover {
     color: #333;
     background: hsl(37, 86%, 59%);
-}
-
-a[href^="http://hector"] {
-    color: hsl(101, 22%, 39%);
-    background: hsl(101, 22%, 97%);
-}
-
-a[href^="http://hector"]:focus,
-a[href^="http://hector"]:hover {
-    background: hsl(101, 22%, 39%);
 }
